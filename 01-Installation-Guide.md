@@ -73,15 +73,10 @@ This guide explains how to install and configure **Jenkins** on an **Amazon Linu
   sudo systemctl status jenkins
 ```
 
-## 10. Retrieve the Initial Admin Password After the service has started, you'll need the initial password to unlock Jenkins from the web interface. # Display the initial administrator password
-```bash
-  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-```
-
-## 11. Access Jenkins Open your web browser and navigate to:
+## 10. Access Jenkins Open your web browser and navigate to:
     http://<Your-EC2-Public-IP>:8080
 
-## 12. Display the initial administrator password
+## 11. Display the initial administrator password
 ``` bash
   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
