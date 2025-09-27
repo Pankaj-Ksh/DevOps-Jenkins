@@ -31,52 +31,52 @@ This guide explains how to install and configure **Jenkins** on an **Amazon Linu
 
 ## 0. Switch to root user 
 ```bash 
-  sudo su
+sudo su
 ```
 
 ## 1. Add the Jenkins repository
 ```bash 
-  wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 ```
 
 ## 2. Import the Jenkins GPG key to verify packages
 ```bash
-  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 ```
 
 ## 3. Update your system's package list
 ```bash 
-  dnf upgrade -y
+dnf upgrade -y
 ```
 
 ## 4. Install Java 17 (Amazon Corretto) and fontconfig, which are required dependencies for Jenkins
 ```bash 
-  dnf install -y fontconfig java-17-amazon-corretto
+dnf install -y fontconfig java-17-amazon-corretto
 ```
 
 ## 5. Install Jenkins itself
 ```bash
-  dnf install -y jenkins
+dnf install -y jenkins
 ```
 
 ## 6. Reload the systemd manager configuration to recognize the new Jenkins service
 ```bash
-  systemctl daemon-reload
+systemctl daemon-reload
 ```
 
 ## 7. Enable Jenkins to start automatically on boot
 ```bash
-  systemctl enable jenkins
+systemctl enable jenkins
 ```
 
 ## 8. Start the Jenkins service
 ```bash
-  systemctl start jenkins
+systemctl start jenkins
 ```
 
 ## 9. Verify that the Jenkins service is running correctly
 ```bash
-  systemctl status jenkins
+systemctl status jenkins
 ```
 
 ## 10. Access Jenkins Open your web browser and navigate to:
@@ -84,5 +84,5 @@ This guide explains how to install and configure **Jenkins** on an **Amazon Linu
 
 ## 11. Display the initial administrator password
 ``` bash
-  cat /var/lib/jenkins/secrets/initialAdminPassword
+cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
