@@ -45,7 +45,6 @@ This file outlines the steps for installing, configuring, and starting an **Apac
 To allow the Jenkins server to remotely deploy applications, you must remove the IP address restriction from the **Manager** application's `context.xml`.
 
 1.  **Edit `context.xml` for Manager:** Navigate to the Manager application's metadata directory and open its configuration file.
-    * **Note:** The path in the original request uses `apache-tomcat-10.1.34/webapps/manager/META-INF`, but based on the installation, the correct path is likely under `apache-tomcat-9.0.109`.
     ```bash
     cd apache-tomcat-9.0.109/webapps/manager/META-INF/
     vi context.xml
