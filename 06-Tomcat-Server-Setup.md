@@ -47,7 +47,7 @@ To allow the Jenkins server to remotely deploy applications, you must remove the
 1.  **Edit `context.xml` for Manager:** Navigate to the Manager application's metadata directory and open its configuration file.
     * **Note:** The path in the original request uses `apache-tomcat-10.1.34/webapps/manager/META-INF`, but based on the installation, the correct path is likely under `apache-tomcat-9.0.109`.
     ```bash
-    cd ../webapps/manager/META-INF/
+    cd apache-tomcat-9.0.109/webapps/manager/META-INF/
     vi context.xml
     ```
 
@@ -63,7 +63,7 @@ To allow the Jenkins server to remotely deploy applications, you must remove the
 
 1.  **Start the Server:** Navigate to the `bin` directory and execute the startup script.
     ```bash
-    cd ../../../bin/
+    cd apache-tomcat-9.0.109/bin/
     sh startup.sh
     ```
 
