@@ -33,6 +33,26 @@ No manual intervention required after setup! 🎯
 
 ---
 
+## ⚙️ Jenkins Freestyle Job Configuration  
+
+1. **Source Code Management**  
+   - Git → Add GitHub repository URL  
+   - Branch → `main`  
+
+2. **Build Triggers**  
+   - Select **GitHub hook trigger for GITScm polling**  
+
+3. **Build Steps**  
+   - Execute Maven → `clean package`  
+
+4. **Post-Build Actions**  
+   - Upload `.war` to Amazon S3 (via S3 plugin or AWS CLI)  
+   - Deploy `.war` to Tomcat (via *Deploy to container* plugin)  
+
+---
+
+---
+
 ## ⚠️ Issues Faced  
 - ❌ **S3 Bucket Not Found** → Fixed by creating bucket before job run.  
 - 🔑 **Encryption Error** → Disabled SSE-C in advanced settings.  
