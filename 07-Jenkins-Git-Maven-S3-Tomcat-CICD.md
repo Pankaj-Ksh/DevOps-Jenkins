@@ -51,8 +51,6 @@ No manual intervention required after setup! 🎯
 
 ---
 
----
-
 ## ⚠️ Issues Faced  
 - ❌ **S3 Bucket Not Found** → Fixed by creating bucket before job run.  
 - 🔑 **Encryption Error** → Disabled SSE-C in advanced settings.  
