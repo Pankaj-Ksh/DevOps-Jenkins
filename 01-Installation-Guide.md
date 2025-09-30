@@ -89,6 +89,8 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ## Ready to use Script :
 ```
+dnf install -y git maven
+
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
