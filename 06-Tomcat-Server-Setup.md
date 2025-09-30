@@ -77,7 +77,7 @@ To allow the Jenkins server to remotely deploy applications, you must remove the
     ```
 
 
-### Ready to use Script 
+## Ready to use Script 
 ```
 dnf install java-17-amazon-corretto -y
 
